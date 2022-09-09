@@ -1,8 +1,6 @@
 import { StanleyTool } from './StanleyTool';
 
-const StanleyScrewDriver: ScrewDriver = Object.create(StanleyTool, {
-  price: { value: 120 },
-  handle_material: { value: 'plastic' },
-});
-
-export { StanleyScrewDriver };
+export class StanleyScrewDriver extends StanleyTool implements ScrewDriver {
+  price = 120;
+  handle_material: Material = 'plastic';
+}

@@ -1,8 +1,6 @@
 import { StanleyTool } from './StanleyTool';
 
-const StanleyTweezers: Tweezers = Object.create(StanleyTool, {
-  price: { value: 115 },
-  material: { value: 'iron' },
-});
-
-export { StanleyTweezers };
+export class StanleyTweezers extends StanleyTool implements Tweezers {
+  price = 115;
+  material: Material = 'iron';
+}

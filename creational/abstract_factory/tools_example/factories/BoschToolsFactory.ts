@@ -5,36 +5,34 @@ import { BoschSaw } from '../products/bosch/BoschSaw';
 import { BoschScrewDriver } from '../products/bosch/BoschScrewDriver';
 import { BoschTweezers } from '../products/bosch/BoschTweezers';
 
-const BoschToolsFactory: ToolsFactory = {
-  createScrewDriver: function (): ScrewDriver {
-    const screwDriver: ScrewDriver = Object.create(BoschScrewDriver);
+export class BoschToolsFactory implements ToolsFactory {
+  createScrewDriver(): ScrewDriver {
+    const screwDriver = new BoschScrewDriver();
     return screwDriver;
-  },
+  }
 
-  createHammer: function (): Hammer {
-    const hammer: Hammer = Object.create(BoschHammer);
+  createHammer(): Hammer {
+    const hammer = new BoschHammer();
     return hammer;
-  },
+  }
 
-  createTweezers: function (): Tweezers {
-    const tweezers: Tweezers = Object.create(BoschTweezers);
+  createTweezers(): Tweezers {
+    const tweezers = new BoschTweezers();
     return tweezers;
-  },
+  }
 
-  createPliers: function (): Pliers {
-    const pliers: Pliers = Object.create(BoschPliers);
+  createPliers(): Pliers {
+    const pliers = new BoschPliers();
     return pliers;
-  },
+  }
 
-  createSaw: function (): Saw {
-    const saw: Saw = Object.create(BoschSaw);
+  createSaw(): Saw {
+    const saw = new BoschSaw();
     return saw;
-  },
+  }
 
-  createDrill: function (): Drill {
-    const drill: Drill = Object.create(BoschDrill);
+  createDrill(): Drill {
+    const drill = new BoschDrill();
     return drill;
-  },
-};
-
-export { BoschToolsFactory };
+  }
+}

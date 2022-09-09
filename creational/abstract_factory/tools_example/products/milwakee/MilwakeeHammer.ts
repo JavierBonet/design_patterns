@@ -1,9 +1,7 @@
 import { MilwakeeTool } from './MilwakeeTool';
 
-const MilwakeeHammer: Hammer = Object.create(MilwakeeTool, {
-  price: { value: 200 },
-  handle_material: { value: 'plastic' },
-  head_material: { value: 'iron' },
-});
-
-export { MilwakeeHammer };
+export class MilwakeeHammer extends MilwakeeTool implements Hammer {
+  price = 200;
+  handle_material: Material = 'plastic';
+  head_material: Material = 'iron';
+}

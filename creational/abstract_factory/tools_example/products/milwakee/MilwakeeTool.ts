@@ -1,6 +1,4 @@
-const MilwakeeTool: Tool = {
-  brand: 'Milwakee',
-  price: 0,
-};
-
-export { MilwakeeTool };
+export class MilwakeeTool implements Tool {
+  brand = 'Milwakee';
+  price = 0;
+}

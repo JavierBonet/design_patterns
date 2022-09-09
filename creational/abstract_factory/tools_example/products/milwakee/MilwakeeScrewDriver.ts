@@ -1,8 +1,6 @@
 import { MilwakeeTool } from './MilwakeeTool';
 
-const MilwakeeScrewDriver: ScrewDriver = Object.create(MilwakeeTool, {
-  price: { value: 155 },
-  handle_material: { value: 'plastic' },
-});
-
-export { MilwakeeScrewDriver };
+export class MilwakeeScrewDriver extends MilwakeeTool implements ScrewDriver {
+  price = 155;
+  handle_material: Material = 'plastic';
+}

@@ -5,36 +5,34 @@ import { StanleySaw } from '../products/stanley/StanleySaw';
 import { StanleyScrewDriver } from '../products/stanley/StanleyScrewDriver';
 import { StanleyTweezers } from '../products/stanley/StanleyTweezers';
 
-const StanleyToolsFactory: ToolsFactory = {
-  createScrewDriver: function (): ScrewDriver {
-    const screwDriver: ScrewDriver = Object.create(StanleyScrewDriver);
+export class StanleyToolsFactory implements ToolsFactory {
+  createScrewDriver(): ScrewDriver {
+    const screwDriver = new StanleyScrewDriver();
     return screwDriver;
-  },
+  }
 
-  createHammer: function (): Hammer {
-    const hammer: Hammer = Object.create(StanleyHammer);
+  createHammer(): Hammer {
+    const hammer = new StanleyHammer();
     return hammer;
-  },
+  }
 
-  createTweezers: function (): Tweezers {
-    const tweezers: Tweezers = Object.create(StanleyTweezers);
+  createTweezers(): Tweezers {
+    const tweezers = new StanleyTweezers();
     return tweezers;
-  },
+  }
 
-  createPliers: function (): Pliers {
-    const pliers: Pliers = Object.create(StanleyPliers);
+  createPliers(): Pliers {
+    const pliers = new StanleyPliers();
     return pliers;
-  },
+  }
 
-  createSaw: function (): Saw {
-    const saw: Saw = Object.create(StanleySaw);
+  createSaw(): Saw {
+    const saw = new StanleySaw();
     return saw;
-  },
+  }
 
-  createDrill: function (): Drill {
-    const drill: Drill = Object.create(StanleyDrill);
+  createDrill(): Drill {
+    const drill = new StanleyDrill();
     return drill;
-  },
-};
-
-export { StanleyToolsFactory };
+  }
+}

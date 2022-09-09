@@ -1,8 +1,6 @@
 import { BoschTool } from './BoschTool';
 
-const BoschTweezers: Tweezers = Object.create(BoschTool, {
-  price: { value: 130 },
-  material: { value: 'iron' },
-});
-
-export { BoschTweezers };
+export class BoschTweezers extends BoschTool implements Tweezers {
+  price = 130;
+  material: Material = 'iron';
+}

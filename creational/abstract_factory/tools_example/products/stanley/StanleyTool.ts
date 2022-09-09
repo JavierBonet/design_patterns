@@ -1,6 +1,4 @@
-const StanleyTool: Tool = {
-  brand: 'Stanley',
-  price: 0,
-};
-
-export { StanleyTool };
+export class StanleyTool implements Tool {
+  brand = 'Stanley';
+  price = 0;
+}

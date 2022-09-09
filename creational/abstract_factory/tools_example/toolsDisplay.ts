@@ -15,7 +15,7 @@ function main() {
 
   if (args.length > 2 && handledBrands.has(args[2])) {
     const brand = args[2];
-    const toolsFactory: ToolsFactory = createToolFactory(brand);
+    const toolsFactory = createToolFactory(brand);
 
     printToolsInfo(toolsFactory);
   } else {
@@ -29,16 +29,16 @@ function createToolFactory(brand: string): ToolsFactory {
   let toolsFactory: ToolsFactory;
   switch (brand) {
     case 'Bosch':
-      toolsFactory = Object.create(BoschToolsFactory);
+      toolsFactory = new BoschToolsFactory();
       break;
     case 'Makita':
-      toolsFactory = Object.create(MakitaToolsFactory);
+      toolsFactory = new MakitaToolsFactory();
       break;
     case 'Milwakee':
-      toolsFactory = Object.create(MilwakeeToolsFactory);
+      toolsFactory = new MilwakeeToolsFactory();
       break;
     default:
-      toolsFactory = Object.create(StanleyToolsFactory);
+      toolsFactory = new StanleyToolsFactory();
       break;
   }
 
@@ -53,35 +53,17 @@ function printToolsInfo(toolsFactory: ToolsFactory) {
   let saw = toolsFactory.createSaw();
   let drill = toolsFactory.createDrill();
 
-  console.log(`Brand: ${screwDriver.brand}`);
-  console.log('');
-  console.log('Screw driver');
-  console.log(
-    `$${screwDriver.price}, handle material: ${screwDriver.handle_material}`
-  );
-  console.log('');
-  console.log('Hammer');
-  console.log(
-    `$${hammer.price}, handle material: ${hammer.handle_material}, head material: ${hammer.head_material}`
-  );
-  console.log('');
-  console.log('Tweezers');
-  console.log(`$${tweezers.price}, material: ${tweezers.material}`);
-  console.log('');
-  console.log('Pliers');
-  console.log(
-    `$${pliers.price}, handle material: ${pliers.handle_material}, jaws material: ${pliers.jaws_material}`
-  );
-  console.log('');
-  console.log('Saw');
-  console.log(
-    `$${saw.price}, handle material: ${saw.handle_material}, blade material: ${saw.blade_material}`
-  );
-  console.log('');
-  console.log('Drill');
-  console.log(
-    `$${drill.price}, minimum bit diameter: ${drill.minimum_bit_diameter}, maximum bit diameter: ${drill.maximum_bit_diameter}, voltage: ${drill.voltage}`
-  );
+  console.log(screwDriver);
+
+  console.log(hammer);
+
+  console.log(tweezers);
+
+  console.log(pliers);
+
+  console.log(saw);
+
+  console.log(drill);
 }
 
 main();

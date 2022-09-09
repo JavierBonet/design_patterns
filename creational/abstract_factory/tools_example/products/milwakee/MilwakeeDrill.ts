@@ -1,10 +1,8 @@
 import { MilwakeeTool } from './MilwakeeTool';
 
-const MilwakeeDrill: Drill = Object.create(MilwakeeTool, {
-  price: { value: 370 },
-  minimum_bit_diameter: { value: 5 },
-  maximum_bit_diameter: { value: 13 },
-  voltage: { value: '18v' },
-});
-
-export { MilwakeeDrill };
+export class MilwakeeDrill extends MilwakeeTool implements Drill {
+  price = 370;
+  minimum_bit_diameter = 5;
+  maximum_bit_diameter = 13;
+  voltage: Voltage = '18v';
+}

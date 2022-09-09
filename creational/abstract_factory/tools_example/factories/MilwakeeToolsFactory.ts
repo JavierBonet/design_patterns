@@ -5,36 +5,34 @@ import { MilwakeeSaw } from '../products/milwakee/MilwakeeSaw';
 import { MilwakeeScrewDriver } from '../products/milwakee/MilwakeeScrewDriver';
 import { MilwakeeTweezers } from '../products/milwakee/MilwakeeTweezers';
 
-const MilwakeeToolsFactory: ToolsFactory = {
-  createScrewDriver: function (): ScrewDriver {
-    const screwDriver: ScrewDriver = Object.create(MilwakeeScrewDriver);
+export class MilwakeeToolsFactory implements ToolsFactory {
+  createScrewDriver(): ScrewDriver {
+    const screwDriver = new MilwakeeScrewDriver();
     return screwDriver;
-  },
+  }
 
-  createHammer: function (): Hammer {
-    const hammer: Hammer = Object.create(MilwakeeHammer);
+  createHammer(): Hammer {
+    const hammer = new MilwakeeHammer();
     return hammer;
-  },
+  }
 
-  createTweezers: function (): Tweezers {
-    const tweezers: Tweezers = Object.create(MilwakeeTweezers);
+  createTweezers(): Tweezers {
+    const tweezers = new MilwakeeTweezers();
     return tweezers;
-  },
+  }
 
-  createPliers: function (): Pliers {
-    const pliers: Pliers = Object.create(MilwakeePliers);
+  createPliers(): Pliers {
+    const pliers = new MilwakeePliers();
     return pliers;
-  },
+  }
 
-  createSaw: function (): Saw {
-    const saw: Saw = Object.create(MilwakeeSaw);
+  createSaw(): Saw {
+    const saw = new MilwakeeSaw();
     return saw;
-  },
+  }
 
-  createDrill: function (): Drill {
-    const drill: Drill = Object.create(MilwakeeDrill);
+  createDrill(): Drill {
+    const drill = new MilwakeeDrill();
     return drill;
-  },
-};
-
-export { MilwakeeToolsFactory };
+  }
+}

@@ -1,6 +1,4 @@
-const MakitaTool: Tool = {
-  brand: 'Makita',
-  price: 0,
-};
-
-export { MakitaTool };
+export class MakitaTool implements Tool {
+  brand = 'Makita';
+  price = 0;
+}

@@ -5,36 +5,34 @@ import { MakitaSaw } from '../products/makita/MakitaSaw';
 import { MakitaScrewDriver } from '../products/makita/MakitaScrewDriver';
 import { MakitaTweezers } from '../products/makita/MakitaTweezers';
 
-const MakitaToolsFactory: ToolsFactory = {
-  createScrewDriver: function (): ScrewDriver {
-    const screwDriver: ScrewDriver = Object.create(MakitaScrewDriver);
+export class MakitaToolsFactory implements ToolsFactory {
+  createScrewDriver(): ScrewDriver {
+    const screwDriver = new MakitaScrewDriver();
     return screwDriver;
-  },
+  }
 
-  createHammer: function (): Hammer {
-    const hammer: Hammer = Object.create(MakitaHammer);
+  createHammer(): Hammer {
+    const hammer = new MakitaHammer();
     return hammer;
-  },
+  }
 
-  createTweezers: function (): Tweezers {
-    const tweezers: Tweezers = Object.create(MakitaTweezers);
+  createTweezers(): Tweezers {
+    const tweezers = new MakitaTweezers();
     return tweezers;
-  },
+  }
 
-  createPliers: function (): Pliers {
-    const pliers: Pliers = Object.create(MakitaPliers);
+  createPliers(): Pliers {
+    const pliers = new MakitaPliers();
     return pliers;
-  },
+  }
 
-  createSaw: function (): Saw {
-    const saw: Saw = Object.create(MakitaSaw);
+  createSaw(): Saw {
+    const saw = new MakitaSaw();
     return saw;
-  },
+  }
 
-  createDrill: function (): Drill {
-    const drill: Drill = Object.create(MakitaDrill);
+  createDrill(): Drill {
+    const drill = new MakitaDrill();
     return drill;
-  },
-};
-
-export { MakitaToolsFactory };
+  }
+}

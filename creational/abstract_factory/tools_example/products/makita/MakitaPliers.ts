@@ -1,9 +1,7 @@
 import { MakitaTool } from './MakitaTool';
 
-const MakitaPliers: Pliers = Object.create(MakitaTool, {
-  price: { value: 170 },
-  handle_material: { value: 'plastic' },
-  jaws_material: { value: 'steel' },
-});
-
-export { MakitaPliers };
+export class MakitaPliers extends MakitaTool implements Pliers {
+  price = 170;
+  handle_material: Material = 'plastic';
+  jaws_material: Material = 'steel';
+}

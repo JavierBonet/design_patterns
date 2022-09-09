@@ -1,9 +1,7 @@
 import { MakitaTool } from './MakitaTool';
 
-const MakitaHammer: Hammer = Object.create(MakitaTool, {
-  price: { value: 200 },
-  handle_material: { value: 'plastic' },
-  head_material: { value: 'iron' },
-});
-
-export { MakitaHammer };
+export class MakitaHammer extends MakitaTool implements Hammer {
+  price = 200;
+  handle_material: Material = 'plastic';
+  head_material: Material = 'iron';
+}

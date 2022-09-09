@@ -1,6 +1,4 @@
-const BoschTool: Tool = {
-  brand: 'Bosch',
-  price: 0,
-};
-
-export { BoschTool };
+export class BoschTool implements Tool {
+  brand = 'Bosch';
+  price = 0;
+}

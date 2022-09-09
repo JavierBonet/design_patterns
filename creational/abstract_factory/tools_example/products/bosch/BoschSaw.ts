@@ -1,9 +1,7 @@
 import { BoschTool } from './BoschTool';
 
-const BoschSaw: Saw = Object.create(BoschTool, {
-  price: { value: 210 },
-  handle_material: { value: 'plastic' },
-  blade_material: { value: 'steel' },
-});
-
-export { BoschSaw };
+export class BoschSaw extends BoschTool implements Saw {
+  price = 210;
+  handle_material: Material = 'plastic';
+  blade_material: Material = 'steel';
+}
