@@ -1,9 +1,7 @@
-const WoodWardrobe: Wardrobe = {
-  name: 'Un-named',
+export class WoodWardrobe implements Wardrobe {
+  name = 'Un-named';
 
-  getMaterialAmounts: function (): { [material: string]: number } {
+  getMaterialAmounts(): { [material: string]: number } {
     return { wood: 1000, steel: 100 };
-  },
-};
-
-export { WoodWardrobe };
+  }
+}

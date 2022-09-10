@@ -1,22 +1,22 @@
-const TokenGenerator: TokenGeneratorInterface = {
-  count: 0,
+export class TokenGenerator implements TokenGeneratorInterface {
+  count = 0;
 
-  generateToken: () => {
+  generateToken = () => {
     return '12312';
-  },
+  };
 
-  getCount: function (): number {
+  getCount(): number {
     return this.count;
-  },
+  }
 
-  incrementCount: function (): void {
+  incrementCount(): void {
     this.count++;
-  },
+  }
 
-  decrementCount: function (): void {
+  decrementCount(): void {
     this.count--;
-  },
-};
+  }
+}
 
 let instance: TokenGeneratorInterface | undefined = undefined;
 

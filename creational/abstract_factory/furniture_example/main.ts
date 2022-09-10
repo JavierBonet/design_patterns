@@ -7,11 +7,9 @@ function main() {
   const table = factory.createTable('TABLE');
   const wardrobe = factory.createWardrobe('WARDROBE');
 
-  console.log(chair.name);
-  console.log(chair.getNumberOfLegs());
-  console.log(chair.getMaterialAmount());
-  console.log(table.name);
-  console.log(wardrobe.name);
+  console.log(chair);
+  console.log(table);
+  console.log(wardrobe);
 }
 
 main();

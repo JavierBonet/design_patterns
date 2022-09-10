@@ -1,13 +1,11 @@
-const WoodTable: Table = {
-  name: 'Un-named',
+export class WoodTable implements Table {
+  name = 'Un-named';
 
-  getNumberOfLegs: function (): number {
+  getNumberOfLegs(): number {
     return 4;
-  },
+  }
 
-  getMaterialAmount: function (): number {
+  getMaterialAmount(): number {
     return 500;
-  },
-};
-
-export { WoodTable };
+  }
+}

@@ -1,13 +1,11 @@
-const WoodChair: Chair = {
-  name: 'Un-named',
+export class WoodChair implements Chair {
+  name = 'Un-named';
 
-  getNumberOfLegs: function (): number {
+  getNumberOfLegs(): number {
     return 4;
-  },
+  }
 
-  getMaterialAmount: function (): number {
+  getMaterialAmount(): number {
     return 70;
-  },
-};
-
-export { WoodChair };
+  }
+}
