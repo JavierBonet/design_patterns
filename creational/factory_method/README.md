@@ -36,5 +36,5 @@ Use this pattern when you don't know beforehand the types and dependencies your 
 | Pros :white_check_mark: | Cons :x: |
 |--- |--- |
 | You avoid tight coupling between the creator and the concrete products | The code become more complicated as you need to include the creator and the product interfaces and concrete classes |
-| By moving the code responsible of the product creation inside a single class you are isolating it and, hence, making it simpler for future posible modifications | |
+| By moving the code responsible of the product creation inside a single class you are isolating it and, hence, making it simpler for future possible modifications | |
 | New types of products can be included without breaking the existing code | |
