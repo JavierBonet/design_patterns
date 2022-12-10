@@ -24,8 +24,8 @@ function getInstance(): TokenGeneratorInterface {
   if (instance) {
     return instance;
   } else {
-    instance = Object.create(TokenGenerator);
-    return instance as TokenGeneratorInterface;
+    instance = new TokenGenerator();
+    return instance;
   }
 }
 
