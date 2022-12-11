@@ -1,6 +1,6 @@
 # Abstract factory
 ## Purpose
-The abstract factory patter is a creational design pattern which allows to create families of related objects without specifying the concrete classes
+The abstract factory pattern is a creational design pattern which allows to create families of related objects without specifying the concrete classes
 
 ## Structure
 This pattern is structured as follows:
