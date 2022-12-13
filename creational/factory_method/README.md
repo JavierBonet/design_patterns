@@ -1,7 +1,7 @@
 # Factory method
 
 ## Purpose
-The factory method pattern allows decloupling concrete product creation from the client code by using a creation class that holds the responsibility of creating the corresponding concrete product instance needed by the client code.
+The factory method pattern allows decoupling concrete product creation from the client code by using a creation class that holds the responsibility of creating the corresponding concrete product instance needed by the client code.
 
 ## Structure
 This pattern is structured as follows:
