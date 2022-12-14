@@ -10,8 +10,6 @@ This pattern is structured as follows:
 
 #### Creator interface
 
-Should define a class with the following elements:
-
 - createProduct: this method is in charge of creating the product
 - otherAction: the creator interface is not limited to just the createProduct method, it could also include other actions that might be needed
 
